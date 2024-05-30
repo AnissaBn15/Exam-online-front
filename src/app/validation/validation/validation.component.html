@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-start">
+        <div class="col-md-6 mt-3">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Test en ligne</h2>
+                    <div class="d-flex justify-content-center align-items-center mb-3" style="height: 400px; background-color: #E0E0E0;">                        <div style="max-width: 100%; max-height: 100%; overflow: hidden;">
+                            <webcam style="width: 100%; height: auto;"></webcam>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-block" (click)="checkPermissions()">Vérifier les permissions de la caméra</button>
+                    <p #status1 class="text-danger mt-3"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mt-3">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title mb-3">Connexion des téléphones</h5>
+                    <p class="telephone mb-1">Téléphone1 : (Détection d'objets) <span class="text-danger" #connect1>non connecté</span></p>
+                    <p class="telephone mb-1">Téléphone2 : (Détection de mouvement) <span class="text-danger" #connect2>non connecté</span></p>
+                    <button class="btn btn-primary btn-block mt-3" (click)="sendMessage()">Vérifier</button>
+                </div>
+            </div>
+            <div class="card shadow mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">Vos coordonnées</h5>
+                    <p class="telephone">Nom: <span>{{ nom }}</span></p>
+                    <p class="telephone">Prénom: <span>{{ prenom }}</span></p>
+                    <p class="telephone">Identifiant: <span>{{ identifiant }}</span></p>
+                </div>
+            </div>
+            <div class="card shadow mt-3" style="height: 200px; overflow-y: auto;">
+                <div class="card-body">
+                    <h5 class="card-title">Les règles à respecter durant le test :</h5>
+                    <ul class="list-group mt-3" style="font-size: 14px; margin-top: -10px;">
+                        <li class="list-group-item">Seul le participant peut être présent dans la salle d'examen à tout moment.</li>
+                        <li class="list-group-item">Le silence complet est requis après le début du test.</li>
+                        <li class="list-group-item">L'utilisation de documents ou de téléphones est strictement interdite.</li>
+                        <li class="list-group-item">Attention! La durée du test est de 15 minutes.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-3">
+            <button class="btn btn-primary btn-mt mx-auto d-block" style="width: 150px; height: 30px; font-size: 14px;padding: 8px; text-align:center;" (click)="go()">Démarrer le test</button>
+        </div>
+    </div>
+</div>

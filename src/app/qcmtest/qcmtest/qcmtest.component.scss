@@ -1,0 +1,29 @@
+
+.bg-night-blue {
+    background-color: #191970; /* bleu nuit */
+    color: #fff; /* texte blanc */
+  }
+  
+  .display-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15px; /* Ajustez la marge supérieure selon vos besoins */
+  }
+  
+  .timer-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .timer-text {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
